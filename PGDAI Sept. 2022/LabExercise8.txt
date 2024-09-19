@@ -1,0 +1,64 @@
+#Q1
+f=open("wololo.txt",'r')
+print(f.read())
+f.close()
+
+
+#Q2
+f=open("wololo.txt",'r')
+n=int(input("Give n: "))
+for i in range(0,n):
+    print(f.readline(),end='')
+f.close()
+
+
+#Q3
+f=open("wololo.txt",'a')
+s=input("Write text to append: ")
+f.write("\n"+s)
+f2=open("wololo.txt",'r')
+print(f2.read())
+f.close()
+f2.close()
+
+
+#Q4
+f=open("wololo.txt",'r')
+l1=f.readlines()
+print(l1)
+f.close()
+
+
+#Q5
+f=open("wololo.txt",'r')
+l1=f.readlines()
+l1.reverse()
+for i in range(0,len(l1)):
+    print(l1[i])
+f.close()
+
+
+#Q6
+l=['a',4,'blah',6.66]
+f=open("wololo.txt",'w')
+s=str(l)
+f.write(s)
+f.close()
+
+
+#Q7
+import os
+f=open("wololo.txt",'r')
+chars=0
+words=0
+lines=0
+for line in f:
+    line=line.strip(os.linesep)
+    wordslist=line.split()
+    lines+=1
+    words=words+len(wordslist)
+    chars=chars+sum(1 for c in line
+            if c not in (os.linesep,' '))
+print("Number of characters=",chars)
+print("Number of words=",words)
+print("Number of lines=",lines)

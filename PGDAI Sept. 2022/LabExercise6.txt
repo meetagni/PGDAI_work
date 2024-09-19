@@ -1,0 +1,90 @@
+#Q1
+def add(x,y):
+    print(x,"+",y,"=",x+y)
+def sub(x,y):
+    print(x,"-",y,"=",x-y)
+def mul(x,y):
+    print(x,"x",y,"=",x*y)
+def div(x,y):
+    print(x,"/",y,"=",x/y)
+print("Select operation.")
+print("1.Add\n2.Subtract\n3.Multiply\n4.Divide")
+c=int(input("Enter choice(1/2/3/4) "))
+n1=int(input("Enter first number: "))
+n2=int(input("Enter second number: "))
+if(c==1):
+    add(n1,n2)
+elif(c==2):
+    sub(n1,n2)
+elif(c==3):
+    mul(n1,n2)
+elif(c==4):
+    if(n2==0):
+        print("Can't divide by 0")
+    else:
+        div(n1,n2)
+else:
+    print("Invalid choice")
+
+
+#Q2
+def fibonacci(n):
+    num1=0
+    num2=1
+    counter=0
+    while(counter<n):
+        print(num1,"",end='')
+        num3=num1+num2
+        num1=num2
+        num2=num3
+        counter+=1
+
+n=int(input("Enter n: "))
+fibonacci(n)
+
+
+#Q3
+n=int(input("Enter number of terms: "))
+b=lambda i:2**i
+for j in range(0,n):
+    print(b(j),"",end='')
+
+
+#Q4
+l=[]
+print("Enter numbers to check if divisible by 13. -1 to stop")
+while(True):
+    x=int(input())
+    if(x==-1):
+        break
+    else:
+        l.append(x)
+for j in range(0,len(l)):
+    if(l[j]%13==0):
+        print(l[j],"",end='')
+
+
+#Q5
+def fibonacci(n):
+    if n < 0:
+        print("Input n greater than 0")
+    elif n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n=int(input("Enter n: "))
+for i in range(0,n):
+    print(fibonacci(i),"",end='')
+
+
+#Q6
+def naturalsum(n):
+    if(n<=1):
+        return n
+    return n+naturalsum(n-1)
+
+n=int(input("Enter n: "))
+print(naturalsum(n))

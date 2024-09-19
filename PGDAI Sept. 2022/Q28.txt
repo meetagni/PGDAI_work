@@ -1,0 +1,21 @@
+people={'Arham':'Blue','Lisa':'Yellow','Vinod':'Purple','Jenny':'Pink'}
+print("The dictionary:\n",people)
+
+#1
+print("Total students in the list are",len(people))
+
+#2
+new={'Lisa':'Red'}
+people.update(new)
+print("The dictionary with Lisa's favourite color being Red:\n",people)
+
+#3
+people.pop('Jenny')
+print("The dictionary without Jenny:\n",people)
+
+#4
+sorted_keys=sorted(people)
+print("List of students in alphabetical:\n",sorted_keys)
+colors=[i for i in people.values()]
+colors.sort()
+print("List of colors in alphabetical:\n",colors)

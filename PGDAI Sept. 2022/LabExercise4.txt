@@ -1,0 +1,106 @@
+#Q1
+sum=0
+for n in range(1,20,2):
+    sum=sum+n
+print(sum)
+
+
+#Q2
+sum=0
+for n in range(101,200):
+    sum+=n
+print(sum)
+
+
+#Q3
+sum=0
+for n in range(0,21,2):
+    sum=(n*n)+sum
+print(sum)
+
+
+#Q4
+for n in range(65,91):
+    print(n,"=",chr(n))
+
+
+#Q5
+for n in range(48,58):
+    print(n,"=",chr(n))
+
+
+#Q6
+for n in range(97,123):
+    print(n,"=",chr(n))
+
+
+#Q7
+L1=[100,200,300,400,500]
+print(list(reversed(L1)))
+
+
+#Q14
+from dataclasses import replace
+import string
+
+
+s=list(input("Enter a string: "))
+punc=list(string.punctuation)
+for i in punc:
+    if(i in s):
+        s.remove(i)
+s2=""
+print(s2.join(s))
+
+
+#Q15
+num=1
+for n1 in range(1,4):
+    while(num>0):
+        print(num,end='')
+        num-=1
+    print()
+    num=n1+1
+
+
+#Q16
+for i in range(0,6):
+    for star in range(0,i+1):
+        print("*",end='')
+    print()
+
+
+#Q17
+for i1 in range(0,4):
+    for star in range(0,i1+1):
+        print("*",end='')
+    print()
+for i2 in range(3,0,-1):
+    for star in range(i2,0,-1):
+        print("*",end='')
+    print()
+
+
+#Q18
+m1,m2=1,1
+for i in range(1,11):
+    if (i<10):
+        print("\t",i,end='')
+    else:
+        print("     ",i,end='')
+print()
+print("\t+","-"*85)
+while(m2<11):
+    if(m2==10):
+        print(m2,"|",end='')
+    else:
+        print("",m2,"|",end='')
+    for m1 in range(1,11):
+        if (m2==10):
+            print("   ",m1*m2," ",end='')
+        elif(m2*m1<10):
+            print("\t",m2*m1,end='')
+        else:
+            print("     ",m2*m1,end='')
+    print()
+    m2+=1

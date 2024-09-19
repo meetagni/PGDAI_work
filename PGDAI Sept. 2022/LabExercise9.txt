@@ -1,0 +1,51 @@
+#Q1
+from datetime import datetime,timedelta
+given_date=datetime(2020,3,22,10,0,0)
+print("A week before that was")
+print(given_date-timedelta(7))
+
+
+#Q2
+from datetime import datetime,timedelta
+given_date=datetime(2020,3,22,10,0,0)
+print(given_date+timedelta(7.5))
+
+
+#Q3
+from datetime import datetime,timedelta
+from time import strftime
+given_date=datetime(2020,3,22,10,0,0)
+print(given_date.strftime("%Y-%m-%d"))
+for i in range(0,10):
+    given_date+=timedelta(14)
+    print(given_date.strftime("%Y-%m-%d"))
+
+
+#Q4
+from datetime import datetime,timedelta
+date_1 = datetime(2020, 2, 25)
+date_2 = datetime(2020, 9, 17)
+diff=date_2-date_1
+print(diff.days,"days")
+
+
+#Q5
+from datetime import datetime,timedelta
+from time import strftime
+print("Current date and time:",datetime.now())
+print("Current year in full:",strftime("%Y"))
+print("Month of year full name:",strftime("%B"))
+print("Weekday of the week:",strftime("%w"))
+print("Day of the year:",strftime("%j"))
+print("Day of the month:",strftime("%d"))
+print("Day of the week:",strftime("%A"))
+
+
+#Q6
+from datetime import date, datetime,timedelta
+from time import strftime
+year = int(input('Enter a year '))
+month = int(input('Enter a month '))
+day = int(input('Enter a day '))
+date1 = date(year,month,day)
+print(date1.strftime("%j"),"day of the year")

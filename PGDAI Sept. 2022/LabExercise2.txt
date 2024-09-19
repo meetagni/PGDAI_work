@@ -1,0 +1,64 @@
+#Q1
+s="This is a 'string' that \"contains both\" quotes."
+print(s)
+
+print("-"*10)
+
+#Q2
+s="""A 'string' that "has both, single" and double quotes.
+And this is on a new line."""
+print(s)
+
+print("-"*10)
+
+#Q3
+c=input("Give a character: ")
+print("As integer:",ord(c))
+
+print("-"*10)
+
+#Q4
+s="abc"*5
+print(s)
+
+print("-"*10)
+
+#Q5
+print("Line of 50 dashes")
+print("-"*50)
+
+print("-"*10)
+
+#Q6
+s=input("Give string: ")
+t=s.upper()
+print(t)
+
+print("-"*10)
+
+#Q7
+s=input("Give string: ")
+t=s[:2] + s[-2] + s[-1]
+print(t)
+
+print("-"*10)
+
+#Q8
+s=input("Give a string to replace first char with $: ")
+c=s[0]
+f=s[1:]
+t=f.replace(c,'$')
+print(c+t)
+
+print("-"*10)
+
+#Q9
+s1=input("Enter first string: ")
+s2=input("Enter second string: ")
+s1chars=s1[:2]
+s2chars=s2[:2]
+news1=s2chars+s1[2:]
+news2=s1chars+s2[2:]
+print(news1+" "+news2)
+
+print("-"*10)

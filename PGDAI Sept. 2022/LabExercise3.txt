@@ -1,0 +1,95 @@
+#Q1
+L1=[5,3,7,6,0,2]
+print(" Sum of [5,3,7,6,0,2] is:",sum(L1))
+
+
+#Q2
+l1=[4,6,4,0,-9,8]
+print("Largest number in list [4,6,4,0,-9,8] is:",max(l1))
+
+
+#Q3
+l1=[4,6,4,0,-9,8]
+print("Smallest number in list [4,6,4,0,-9,8] is:",min(l1))
+
+
+#Q4
+color_list=["Red","Green","White","Black"]
+print("First is",color_list[0],"and last is",color_list[-1])
+
+
+#Q5
+str=input("Enter a string: ")
+if(len(str)<=3):
+    print("String should be longer than 3")
+else:
+    if(str[-3:]=="ing"):
+        print(str+"ly")
+    else:
+        print(str+"ing")
+
+
+#Q6
+print("Enter marks out of 100")
+m1=int(input("Marks in subject 1: "))
+m2=int(input("Marks in subject 2: "))
+m3=int(input("Marks in subject 3: "))
+m4=int(input("Marks in subject 4: "))
+m5=int(input("Marks in subject 5: "))
+per=((m1+m2+m3+m4+m5)/500)*100
+if(per>=60 and per<=100):
+    print("First Division")
+elif(per>=50 and per<60):
+    print("Second Division")
+elif(per>=40 and per<50):
+    print("Third Division")
+elif(per>=0 and per<40):
+    print("Fail")
+else:
+    print("Invalid percentage.")
+
+
+#Q7
+l1=[0,0,0]
+l1[0]=float(input("Enter first number: "))
+l1[1]=float(input("Enter second number: "))
+l1[2]=float(input("Enter third number: "))
+print("Largest number is:",max(l1))
+
+
+#Q8
+y=int(input("Enter an year: "))
+if (y%4==0 and y%100!=0) or (y%400==0):
+    print(y,"is a leap year")
+else:
+    print(y,"is not a leap year")
+
+
+#Q9
+s=input("Enter a string: ")
+s2="".join(reversed(s))
+if(s == s2):
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+#Q10
+str=input("Enter a string: ")
+l1=list(str.split(" "))
+print(l1)
+l1.sort()
+print(l1)
+
+#Q11
+list1=["a","b",["c",["d","e",["f","g"],"k"],"l"],"m","n"]
+list2=["h","i","j"]
+list1[2][1][2].extend(list2)
+print(list1)
+
+#Q12
+list1=[5,10,15,20,15,25,50,20]
+print("list1=",list1)
+i=list1.index(20)
+list1[i]=200
+print("list1=",list1)

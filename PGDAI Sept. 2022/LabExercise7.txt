@@ -1,0 +1,25 @@
+#Q1 This is mymod.py
+def countLines(name):
+    f=open(name,"r")
+    l=len(f.readlines())
+    print("Number of lines is",l)
+    f.close
+
+def countChars(name):
+    f=open(name,"r")
+    c=0
+    for line in f:
+        c=c+(len(line)-1)
+    print("Number of characters is",c)
+    f.close
+
+def test(name):
+    countLines(name)
+    countChars(name)
+
+
+#Q2 Importing mymod
+import mymod
+import mymod as mm
+from mymod import countLines
+from mymod import *

@@ -1,0 +1,76 @@
+#Q1
+try:a=5/0
+except:print("Didn't work")
+
+
+#Q2
+l=[4,8,"twelve",16,'twenty']
+try:
+    for i in range(0,len(l)+1):
+        print(l[i])
+except:
+    print("caught error")
+
+
+#Q3
+def error():
+    f=open("imaginary.txt")
+    print(5/0)
+    a=b+c
+try:error()
+except(FileNotFoundError,ZeroDivisionError,NameError) as e:
+    print(e)
+
+
+#Q4
+num=int(input("Give number: "))
+try:print("Division by 9 gives",9/num)
+except:print("Can't divide by zero")
+else:print("Was successful")
+
+
+#Q5
+num=int(input("Give number: "))
+if(num==0):
+    raise ZeroDivisionError
+else:
+    print("Division by 9 gives",9/num)
+
+
+#Q6
+class SalaryNotInRangeError(Exception):
+    def __init__(self, salary, message="Salary is not in (5000, 15000) range"):
+        self.salary = salary
+        self.message = message
+        super().__init__(self.message)
+
+salary = int(input("Enter salary amount: "))
+if not 5000 < salary < 15000:
+    raise SalaryNotInRangeError(salary)
+
+
+#Q7
+try:a=b-c
+except(NameError):
+    print("name error")
+except:
+    print("other error")
+
+
+#Q8
+f=open("wololo.txt",'r')
+f.write("new text")
+
+output: io.UnsupportedOperation: not writable
+
+
+#Q9
+for x in range(5,-4,-1):
+    print(x)
+    assert x>=0
+
+
+#Q10
+x=input("Enter x: ")
+try:int(x)
+except:raise TypeError

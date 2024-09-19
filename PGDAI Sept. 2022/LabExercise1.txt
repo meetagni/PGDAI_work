@@ -1,0 +1,85 @@
+#Q1
+import math
+print("Enter radius to compute area:")
+r=float(input())
+print("Area of the circle is",(r*r*math.pi))
+
+print("-"*8)
+
+#Q2
+f=float(input("Enter temperature in Fahrenheit: "))
+c=(f-32)*(5/9)
+print("Temperature in Celcius is:",c)
+
+print("-"*8)
+
+#Q3
+a=float(input("Enter first number: "))
+b=float(input("Enter second number: "))
+c=input("What do you want to do with them? ")
+if(c=="add"):
+    print("Sum is:",(a+b))
+elif(c=="subtract"):
+    print("Difference is:",(a-b))
+elif(c=="multiply"):
+    print("Product is:",(a*b))
+elif(c=="divide"):
+    if(b==0):
+        print("Can't divide by zero")
+    else:
+        print("Quotient is:",(a/b))
+else:
+    print("Only 'add', 'subtract', 'multiply' and 'divide' are supported.")
+
+print("-"*8)
+
+#Q4
+import math
+s=float(input("Enter number to find square root: "))
+print("Square root of given number is:",math.sqrt(s))
+
+print("-"*8)
+
+#Q5
+import math
+a=float(input("Area of a triangle\nEnter side a: "))
+b=float(input("Enter side b: "))
+c=float(input("Enter side c: "))
+s=(a+b+c)/2
+thing=s*(s-a)*(s-b)*(s-c)
+area=math.sqrt(thing)
+print("Area is:",area)
+
+print("-"*8)
+
+#Q6
+num=int(input("Enter a five digit integer: "))
+five=num//10000
+rem=num%10000
+four=rem//1000
+rem=rem%1000
+three=rem//100
+rem=rem%100
+two=rem//10
+rem=rem%10
+print("Sum of digits is:",(five+four+three+two+rem))
+
+print("-"*8)
+
+#Q7
+print("Twinkle, twinkle, little star,")
+print("\tHow I wonder what you are!")
+print("\t\tUp above the world so high,")
+print("\t\tLike a diamond in the sky.")
+print("Twinkle, twinkle, little star,")
+print("\tHow I wonder what you are")
+
+print("-"*8)
+
+#Q8
+name=input("Enter name: ")
+age=int(input("Enter age: "))
+add=input("Enter address: ")
+print("Name:",name,"\nAge:",age,"\nAddress:",add)
+
+print("-"*8)

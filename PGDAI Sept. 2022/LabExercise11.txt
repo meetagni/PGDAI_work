@@ -1,0 +1,141 @@
+#Q1
+class Bank:
+    account_num=0
+    def __init__(self,name,acc_type="current",acc_bal=0.0):
+        self.name_of_depositor=name
+        #self.account_num=acc_num
+        self.account_type=acc_type
+        self.account_balance=acc_bal
+    def deposit(self,amount):
+        self.account_balance+=amount
+    def withdraw(self,amount):
+        if(self.account_balance>=amount):
+            self.account_balance-=amount
+        else:
+            print("Insufficient funds")
+    def display(self):
+        print("Account holder:",self.name_of_depositor)
+        print("Account balance:",self.account_balance)
+
+while(True):
+    print("1. New customer")
+    print("2. Deposit")
+    print("3. Withdrawal")
+    print("4. Display")
+    print("5. Exit")
+    c=input()
+    if(c=="1"):
+        n=input("Enter name: ")
+        t=input("Enter account type: ")
+        b=float(input("Enter initial balance: "))
+        ob=Bank(n,t,b)
+        Bank.account_num+=1
+    elif(c=="2"):
+        a=float(input("Enter amount: "))
+        ob.deposit(a)
+    elif(c=="3"):
+        a=float(input("Enter amount: "))
+        ob.withdraw(a)
+    elif(c=="4"):
+        ob.display()
+    elif(c=="5"):
+        break
+    else:
+        print("Invalid choice")
+
+
+
+#Q2
+class person:
+    def __init__(self,name,code):
+        self.name=name
+        self.code=code
+
+class Account(person):
+    def __init__(self,member_pay):
+        self.member_pay=member_pay
+
+class Admin(person):
+    def __init__(self,experience):
+        self.experience=experience
+
+class employee(Account,Admin):
+    def __init__(self, name,code,member_pay,experience):
+        super().__init__(name)
+        super().__init__(code)
+        super().__init__(member_pay)
+        super().__init__(experience)
+
+
+
+#Q3
+class staff:
+    def __init__(self,name,code):
+        self.name=name
+        self.code=code
+
+class teacher(staff):
+    def __init__(self, name, code, subject, pubication):
+        super().__init__(name, code)
+        self.subject=subject
+        self.publication=pubication
+
+class typist(staff):
+    def __init__(self, name, code,speed):
+        super().__init__(name, code)
+        self.speed=speed
+
+class officer(staff):
+    def __init__(self, name, code,grade):
+        super().__init__(name, code)
+        self.grade=grade
+
+class regular(typist):
+    def __init__(self, name, code, speed,salary):
+        super().__init__(name, code, speed)
+        self.salary=salary
+class casual(typist):
+    def __init__(self, name, code, speed,daily_wages):
+        super().__init__(name, code, speed)
+        self.daily_wages=daily_wages
+
+print("""Output:
+1. Teacher
+2. Officer
+3. Regular Typist
+4. Casaul typist
+5. Exit""")
+while(True):
+    c=input("Enter choice: ")
+    if(c=="1"):
+        name=input("Enter name: ")
+        code=input("Enter code: ")
+        sub=input("Enter subject: ")
+        pub=input("Enter publication: ")
+        ob=teacher(name,code,sub,pub)
+        print("\nData entered\n")
+    elif(c=="2"):
+        name=input("Enter name: ")
+        code=input("Enter code: ")
+        gr=input("Enter grade: ")
+        ob=officer(name,code,gr)
+        print("\nData entered\n")
+    elif(c=="3"):
+        name=input("Enter name: ")
+        code=input("Enter code: ")
+        sp=input("Enter speed: ")
+        sal=input("Enter salary: ")
+        ob=regular(name,code,sp,sal)
+        print("\nData entered\n")
+    elif(c=="4"):
+        name=input("Enter name: ")
+        code=input("Enter code: ")
+        sp=input("Enter speed: ")
+        dw=input("Enter daily wages: ")
+        ob=casual(name,code,sp,dw)
+        print("\nData entered\n")
+    elif(c=="5"):
+        print("\nExiting program")
+        break
+    else:
+        print("Invalid choice")

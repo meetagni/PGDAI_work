@@ -1,0 +1,84 @@
+#Q1
+class Triangle:
+    def __init__(self,angle1,angle2,angle3):
+        self.angle1=angle1
+        self.angle2=angle2
+        self.angle3=angle3
+    number_of_sides=3
+    def check_angles(self):
+        if(self.angle1+self.angle2+self.angle3==180):
+            return True
+        else:
+            return False
+
+my_triangle=Triangle(90,30,60)
+print(my_triangle.number_of_sides)
+print(my_triangle.check_angles())
+
+
+#Q2
+class Songs:
+    def __init__(self,lyrics):
+        self.lyrics=list(lyrics)
+    def sing_me_a_song(self):
+        for i in range(0,len(self.lyrics)):
+            print(self.lyrics[i])
+
+happy_bday=Songs(["May god bless you,",
+        "Have a sunshine on you,",
+        "Happy Birthday to you!"])
+happy_bday.sing_me_a_song()
+
+
+#Q3
+class Lunch:
+    def __init__(self,menu):
+        self.menu=str(menu)
+    def menu_price(self):
+        if(self.menu=="menu 1"):
+            print("Your choice:",self.menu,"Price 12.00")
+        elif(self.menu=="menu 2"):
+            print("Your choice:",self.menu,"Price 13.40")
+        else:
+            print("Error in menu")
+
+Paul=Lunch("menu 1")
+Paul.menu_price()
+
+
+#Q4
+class Stringy:
+    def get_String(self):
+        self.s=input("Enter a string: ")
+    def print_String(self):
+        print(self.s.upper())
+
+ob=Stringy()
+ob.get_String()
+ob.print_String()
+
+
+#Q5
+class Rectangle:
+    def area(self,l,b):
+        print("Area of rectangle with length",l,"and breadth",b,"is",(l*b))
+    def perimeter(self,l,b):
+        print("Perimeter of rectangle with length",l,"and breadth",b,"is",2*(l+b))
+    def ui(self):
+        self.length=float(input("Enter Length of a Rectangle: "))
+        self.breadth=float(input("Enter Breadth of a Rectangle: "))
+        while(True):
+            print("1.Area\n2.Perimeter\n3.Exit")
+            c=input("Enter your choice: ")
+            if(c=="1"):
+                self.area(self.length,self.breadth)
+            elif(c=="2"):
+                self.perimeter(self.length,self.breadth)
+            elif(c=="3"):
+                break
+            else:
+                print("Invalid choice")
+        print("End of the Program")
+
+ob=Rectangle()
+ob.ui()
